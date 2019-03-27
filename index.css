@@ -1,0 +1,42 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-header {
+    background-image: linear-gradient(to right, #bcfcff, #34386e);
+    height: 73px;
+    width: 100%;
+}
+
+.main-header-conseil {
+    font-size: 36px;
+    letter-spacing: 5.5px;
+    color: #ffffff;
+}
+
+.main-header-tutorial {
+    font-size: 24px;
+    letter-spacing: 2.6px;
+    color: #fffffe;
+}
+
+.custom-select {
+    background-color: #e6e6e6;
+}
+
+.block-count {
+    width: 58px;
+}
+
+.output-txt {
+    color: #373a3c;
+    font-size: 24px;
+    padding-left: 10px;
+}

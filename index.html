@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+
+    <title>ConseilJS</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="main-header d-flex align-items-center justify-content-between px-3">
+        <div class="main-header-conseil">
+          ConseilJS
+        </div>
+        <div class="main-header-tutorial">
+          HTML tutorial
+        </div>
+      </div>
+      <div class="container">
+        <form class="mt-5">
+          <div class="form-row align-items-center">
+            <div>Show me the hashes of</div>
+            <div class="mx-2">
+              <select class="custom-select" id="order-select">
+                <option value="asc">first</option>
+                <option value="desc">last</option>
+              </select>
+            </div>
+            <div class="block-count">
+              <input type="number" id="limit-input" class="form-control" value="10" >
+            </div>
+            <div class="mx-2">blocks in alphanet.</div>
+            <div>
+              <button type="submit" class="btn btn-primary" onclick="onClickGo(event)">Fetch</button>
+            </div>
+          </div>
+        </form>
+        <div class="row mt-5 output-txt">Results</div>
+        <table class="table" id="query-table">
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Timestamp</th>
+              <th scope="col">Block Hash</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/Cryptonomic/ConseilJS/dist-web/conseiljs.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
