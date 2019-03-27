@@ -2,7 +2,7 @@
 
 A simple HTML page using ConseilJS to query a Conseil node and fetch Tezos data.
 
-Before launching `index.html`, fill in the `serverInfo` for your running instance of Conseil.
+Before launching `index.html`, fill in the `serverInfo` located in `index.js` with the details of your running instance of Conseil.
 
 ```javascript
 const serverInfo = {
