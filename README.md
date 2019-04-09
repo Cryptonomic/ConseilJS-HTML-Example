@@ -12,3 +12,5 @@ const serverInfo = {
 ```
 
 If you want to access our dev servers instead of running your own Conseil, please join our [developers channel](https://riot.im/app/#/room/#cryptonomic-developers:cryptonomic.tech) in Riot and ask for an API key.
+
+[Detailed documentation](https://cryptonomic.github.io/ConseilJS/) is available in the ConseilJS repo.
