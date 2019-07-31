@@ -1,6 +1,6 @@
 const serverInfo = {
-    url: '',
-    apiKey: ''
+    url: 'https://conseil-dev.cryptonomic-infra.tech:443',
+    apiKey: 'hooman'
 };
 
 function refreshTable(blocks = []) {
@@ -37,16 +37,18 @@ function onClickGo(event) {
 }
 
 async function fetchMetadata() {
-    const platformResult = await conseiljs.ConseilMetadataClient.getPlatforms(serverInfo.url, serverInfo.apiKey);
+    const platformResult = await conseiljs.ConseilMetadataClient.getPlatforms(serverInfo);
     const platform = platformResult[0]['name'];
 
-    const networksResult = await conseiljs.ConseilMetadataClient.getNetworks(serverInfo.url, serverInfo.apiKey, platform);
+    const networksResult = await conseiljs.ConseilMetadataClient.getNetworks(serverInfo, platform);
     const network = networksResult[0]['name'];
 
-    const entityResult = await conseiljs.ConseilMetadataClient.getEntities(serverInfo.url, serverInfo.apiKey, platform, network);
+    const entityResult = await conseiljs.ConseilMetadataClient.getEntities(serverInfo, platform, network);
     const blocks = Array.from(entityResult).filter(v => v['name'] === 'blocks')[0]['name'];
 
-    const attributeResult = await conseiljs.ConseilMetadataClient.getAttributes(serverInfo.url, serverInfo.apiKey, platform, network, blocks);
+    const attributeResult = await conseiljs.ConseilMetadataClient.getAttributes(serverInfo, platform, network, blocks);
 }
 
-document.addEventListener("DOMContentLoaded", (event) => { fetchMetadata(); });
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') { fetchMetadata(); }
+}
