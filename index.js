@@ -33,7 +33,7 @@ function onClickGo(event) {
     query = conseiljs.ConseilQueryBuilder.addOrdering(query, 'level', order);
     query = conseiljs.ConseilQueryBuilder.setLimit(query, limit);
 
-    getBlocks('alphanet', query);
+    getBlocks('carthagenet', query);
 }
 
 async function fetchMetadata() {
